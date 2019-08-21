@@ -8,7 +8,7 @@ import java.net.URL;
 
 public class JoyReactor implements Pithy {
     @Override
-    public URL getPhotoFromWebSite(Document document) throws IOException {
+    public URL getPhotoFromWebSite(final Document document) throws IOException {
 
         String string = "";
 

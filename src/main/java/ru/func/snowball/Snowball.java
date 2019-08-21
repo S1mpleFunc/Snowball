@@ -12,13 +12,15 @@ import java.awt.image.RenderedImage;
 import java.io.File;
 import java.io.IOException;
 import java.net.URL;
-import java.util.Random;
+import java.util.Date;
 
 public class Snowball {
 
     public static void main(String... args) throws IOException {
+
+        final Document document = Jsoup.connect(args[0]).get();
+
         /* Поиск фото на посте */
-        Document document = Jsoup.connect(args[0]).get();
         Pithy pithy = new Pikabu();
 
         if (args[0].contains("joy.reactor"))
@@ -28,9 +30,16 @@ public class Snowball {
 
         /* Скачивание фото */
         URL url = pithy.getPhotoFromWebSite(document);
-        File downloadDir = new File(args[1] + "/" + (new Random().nextInt(9000) + 1000) + ".jpg");
+        String formatName = url.toString().split("\\.")[url.toString().split("\\.").length - 1];
+
+        StringBuilder downloadFile = new StringBuilder(args[1]);
+        downloadFile.append("/");
+        downloadFile.append(new Date().getSeconds());
+        downloadFile.append(formatName);
+
+        File downloadDir = new File(downloadFile.toString());
         RenderedImage img = ImageIO.read(url);
-        ImageIO.write(img, "jpg", downloadDir);
+        ImageIO.write(img, formatName, downloadDir);
 
         System.out.println("Файл успешно скачан.");
     }

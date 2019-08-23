@@ -1,12 +1,12 @@
 package ru.func.snowball.beneficiaries;
 
 import org.jsoup.nodes.Document;
+import org.w3c.dom.Element;
 
-import java.io.IOException;
-import java.net.URL;
 import java.util.List;
 
 public interface Pithy {
 
-    List<URL> getPhotoFromWebSite(final Document document) throws IOException;
+    List<Element> getPostFromWebSite(final Document document);
+
 }

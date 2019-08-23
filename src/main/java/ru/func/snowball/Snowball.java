@@ -1,25 +1,38 @@
 package ru.func.snowball;
 
 import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
 import ru.func.snowball.beneficiaries.JoyReactor;
 import ru.func.snowball.beneficiaries.Pikabu;
 import ru.func.snowball.beneficiaries.Pithy;
 
-import javax.imageio.ImageIO;
-import java.awt.image.RenderedImage;
-import java.io.File;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.*;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.URL;
 
 public class Snowball {
 
-    public static void main(String... args) throws IOException {
+    private static Document document;
 
-        final Document document = Jsoup.connect(args[0]).get();
+    public static void main(String... args) throws IOException, ParserConfigurationException, TransformerException {
 
-        /* Поиск фото на посте */
+        document = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
+
+        Element post = document.createElement("post");
+
+        document.appendChild(post);
+
+        /* Добавляю тег с ссылкой на пост */
+        Element url = document.createElement("url");
+        url.appendChild(document.createTextNode(args[0]));
+        post.appendChild(url);
+
+        /* Определение сайта */
         Pithy pithy = null;
 
         if (args[0].contains("joy.reactor"))
@@ -27,26 +40,24 @@ public class Snowball {
         else if (args[0].contains("pikabu"))
             pithy = new Pikabu();
         else
-            System.out.println("Скачивание с данного сервера не поддерживается.");
+            System.out.println("Скачивание поста с данного сервера не поддерживается.");
 
-        /* Скачивание фото */
+        /* Добавление всех элементов в корень XML */
         assert pithy != null;
-        for (URL url : pithy.getPhotoFromWebSite(document)) {
+        pithy.getPostFromWebSite(Jsoup.connect(args[0]).get()).forEach(post::appendChild);
 
-            if (url.toString().isEmpty())
-                continue;
+        /* Сохранение XML файла */
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        transformer.transform(
+                new DOMSource(document),
+                new StreamResult(new FileOutputStream(args[1] + "/" + System.currentTimeMillis() + ".xml"))
+        );
 
-            String formatName = url.toString().split("\\.")[url.toString().split("\\.").length - 1];
+        System.out.println("Пост ускачно скачан.");
+    }
 
-            File downloadDir = new File(
-                    args[1] + "/" +
-                    System.currentTimeMillis() +
-                    "." +
-                    formatName
-            );
-            RenderedImage img = ImageIO.read(url);
-            ImageIO.write(img, formatName, downloadDir);
-            System.out.println("Файл успешно скачан.");
-        }
+    public static Document getDocument() {
+        return document;
     }
 }

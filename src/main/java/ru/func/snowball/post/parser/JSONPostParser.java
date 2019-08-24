@@ -1,8 +1,8 @@
-package ru.func.snowball.parser;
+package ru.func.snowball.post.parser;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import ru.func.snowball.PostParser;
+import ru.func.snowball.post.PostParser;
 
 import java.io.FileWriter;
 import java.io.IOException;

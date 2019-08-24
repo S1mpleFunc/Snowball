@@ -1,7 +1,8 @@
-package ru.func.snowball.content;
+package ru.func.snowball.post.content.element;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import ru.func.snowball.post.content.Content;
 
 @Getter
 @AllArgsConstructor

@@ -7,15 +7,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62751891-8013-4155-b4bb-337e99d74eb8" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Snowball_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Snowball_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/Post.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/PostParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/PostParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/Snowball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/Snowball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/JoyReactor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pikabu.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pithy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/content/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/Content.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/content/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/element/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/content/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/Tag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/content/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/element/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/content/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/element/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/JSONPostParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/JSONPostParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/XMLPostParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/XMLPostParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/parserimpl/JoyReactorJSONPostParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/JoyReactorJSONPostParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/parserimpl/JoyReactorXMLPostParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/JoyReactorXMLPostParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/parserimpl/PikabuJSONPostParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/PikabuJSONPostParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/parserimpl/PikabuXMLPostParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/PikabuXMLPostParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/web/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/Recipient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/web/RecipientJoyReactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/RecipientJoyReactor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/parser/web/RecipientPikabu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/RecipientPikabu.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,6 +61,10 @@
   <component name="ProjectId" id="1PgUdjiaX1PaynAKZLadoXwMOeF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GenerateAntBuildDialog.enableUiFormCompile" value="true" />
+    <property name="GenerateAntBuildDialog.forceTargetJdk" value="true" />
+    <property name="GenerateAntBuildDialog.outputFileNameProperty" value="snowball" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
     <property name="project.structure.last.edited" value="Artifacts" />

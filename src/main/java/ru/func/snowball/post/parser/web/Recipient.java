@@ -1,8 +1,8 @@
-package ru.func.snowball.parser.web;
+package ru.func.snowball.post.parser.web;
 
 import org.jsoup.nodes.Document;
-import ru.func.snowball.content.Content;
-import ru.func.snowball.content.Tag;
+import ru.func.snowball.post.content.Content;
+import ru.func.snowball.post.content.Tag;
 
 import java.util.List;
 

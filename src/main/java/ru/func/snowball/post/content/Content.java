@@ -1,4 +1,4 @@
-package ru.func.snowball.content;
+package ru.func.snowball.post.content;
 
 public interface Content<T> {
 

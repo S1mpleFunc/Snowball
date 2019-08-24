@@ -1,13 +1,13 @@
-package ru.func.snowball.parser.parserimpl;
+package ru.func.snowball.post.parser.parserimpl;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import ru.func.snowball.content.Image;
-import ru.func.snowball.content.Text;
-import ru.func.snowball.content.Video;
-import ru.func.snowball.parser.XMLPostParser;
-import ru.func.snowball.parser.web.Recipient;
-import ru.func.snowball.parser.web.RecipientJoyReactor;
+import ru.func.snowball.post.content.element.Image;
+import ru.func.snowball.post.content.element.Text;
+import ru.func.snowball.post.content.element.Video;
+import ru.func.snowball.post.parser.XMLPostParser;
+import ru.func.snowball.post.parser.web.Recipient;
+import ru.func.snowball.post.parser.web.RecipientJoyReactor;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;

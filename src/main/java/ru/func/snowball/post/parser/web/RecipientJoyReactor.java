@@ -1,7 +1,11 @@
-package ru.func.snowball.parser.web;
+package ru.func.snowball.post.parser.web;
 
 import org.jsoup.nodes.Document;
-import ru.func.snowball.content.*;
+import ru.func.snowball.post.content.*;
+import ru.func.snowball.post.content.Content;
+import ru.func.snowball.post.content.element.Image;
+import ru.func.snowball.post.content.element.Text;
+import ru.func.snowball.post.content.element.Video;
 
 import java.util.ArrayList;
 import java.util.List;

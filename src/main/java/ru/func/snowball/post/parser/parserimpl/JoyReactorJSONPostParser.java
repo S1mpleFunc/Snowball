@@ -1,9 +1,9 @@
-package ru.func.snowball.parser.parserimpl;
+package ru.func.snowball.post.parser.parserimpl;
 
-import ru.func.snowball.Post;
-import ru.func.snowball.parser.JSONPostParser;
-import ru.func.snowball.parser.web.Recipient;
-import ru.func.snowball.parser.web.RecipientJoyReactor;
+import ru.func.snowball.post.Post;
+import ru.func.snowball.post.parser.JSONPostParser;
+import ru.func.snowball.post.parser.web.Recipient;
+import ru.func.snowball.post.parser.web.RecipientJoyReactor;
 
 public class JoyReactorJSONPostParser implements JSONPostParser {
 
@@ -11,14 +11,12 @@ public class JoyReactorJSONPostParser implements JSONPostParser {
 
     @Override
     public void getPost(org.jsoup.nodes.Document document, String url, String dir) {
-        Post post = new Post(
-                url,
+
+        save(GSON.toJson(new Post(url,
                 joyReactor.getAuthor(document),
                 joyReactor.getTimestamp(document),
                 joyReactor.getTags(document),
                 joyReactor.getContent(document)
-        );
-
-        save(GSON.toJson(post), dir);
+        )), dir);
     }
 }

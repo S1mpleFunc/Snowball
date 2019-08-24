@@ -1,4 +1,4 @@
-package ru.func.snowball;
+package ru.func.snowball.post;
 
 import org.jsoup.nodes.Document;
 

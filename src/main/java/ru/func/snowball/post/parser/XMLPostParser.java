@@ -1,7 +1,7 @@
-package ru.func.snowball.parser;
+package ru.func.snowball.post.parser;
 
 import org.w3c.dom.Document;
-import ru.func.snowball.PostParser;
+import ru.func.snowball.post.PostParser;
 
 import javax.xml.transform.*;
 import javax.xml.transform.dom.DOMSource;

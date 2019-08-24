@@ -4,6 +4,7 @@
     <root id="archive" name="Snowball.jar">
       <element id="module-output" name="Snowball" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.12.1/jsoup-1.12.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.5/gson-2.8.5.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>

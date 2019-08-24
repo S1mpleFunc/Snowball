@@ -7,12 +7,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="62751891-8013-4155-b4bb-337e99d74eb8" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Snowball_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/Snowball_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/Snowball.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/Snowball.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/JoyReactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/JoyReactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pikabu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pikabu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pithy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pithy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/JoyReactor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pikabu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/beneficiaries/Pithy.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,9 +23,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>

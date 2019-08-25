@@ -2,9 +2,6 @@ package ru.func.snowball.post.parser.parserimpl;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import ru.func.snowball.post.content.element.Image;
-import ru.func.snowball.post.content.element.Text;
-import ru.func.snowball.post.content.element.Video;
 import ru.func.snowball.post.parser.XMLPostParser;
 import ru.func.snowball.post.parser.web.Recipient;
 import ru.func.snowball.post.parser.web.RecipientJoyReactor;
@@ -57,20 +54,11 @@ public class JoyReactorXMLPostParser implements XMLPostParser {
         /* Копирование поста */
         Element content = this.document.createElement("content");
         joyReactor.getContent(document).forEach(view -> {
-            Element element = null;
-            if (view instanceof Image) {
-                element = this.document.createElement("image");
-                element.appendChild(this.document.createTextNode(((Image) view).getContent()));
-            } else if (view instanceof Video) {
-                element = this.document.createElement("video");
-                element.appendChild(this.document.createTextNode(((Video) view).getContent().getVideo()));
-                element.setAttribute("type", ((Video) view).getContent().getType());
-            } else if (view instanceof Text) {
-                element = this.document.createElement("text");
-                element.appendChild(this.document.createTextNode(((Text) view).getContent()));
-            }
-            if (element != null)
-                content.appendChild(element);
+            Element element = this.document.createElement(view.getTag());
+            element.appendChild(this.document.createTextNode(view.getContent()));
+            if (!view.getAttribute().isEmpty())
+                element.setAttribute("type", view.getAttribute());
+            content.appendChild(element);
         });
         post.appendChild(content);
 

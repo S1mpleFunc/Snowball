@@ -2,9 +2,8 @@ package ru.func.snowball.post.parser.web;
 
 import org.jsoup.nodes.Document;
 import ru.func.snowball.post.content.Content;
-import ru.func.snowball.post.content.element.Image;
+import ru.func.snowball.post.content.ContentImpl;
 import ru.func.snowball.post.content.Tag;
-import ru.func.snowball.post.content.element.Text;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -53,9 +52,9 @@ public class RecipientPikabu implements Recipient {
             if (element.children().size() > 0)
                 for (org.jsoup.nodes.Element child : element.children())
                     if (child.hasText())
-                        contents.add(new Text(child.text()));
+                        contents.add(new ContentImpl("text", child.text(), ""));
             if (element.getElementsByAttribute("href").size() > 0)
-                contents.add(new Image(element.getElementsByAttribute("href").get(0).attr("href")));
+                contents.add(new ContentImpl("image", element.getElementsByAttribute("href").get(0).attr("href"), ""));
         }
 
         return contents;

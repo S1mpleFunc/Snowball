@@ -15,13 +15,13 @@ public class Snowball {
 
         PostParser postParser = null;
         if (args.length > 2 && args[2].equals("json")) {
-            if (args[0].contains("joyreactor")) {
+            if (args[0].contains("reactor")) {
                 postParser = new JoyReactorJSONPostParser();
             } else if (args[0].contains("pikabu")) {
                 postParser = new PikabuJSONPostParser();
             }
         } else {
-            if (args[0].contains("joyreactor")) {
+            if (args[0].contains("reactor")) {
                 postParser = new JoyReactorXMLPostParser();
             } else if (args[0].contains("pikabu")) {
                 postParser = new PikabuXMLPostParser();

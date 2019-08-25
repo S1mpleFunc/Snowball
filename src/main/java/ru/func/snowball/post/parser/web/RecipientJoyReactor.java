@@ -1,11 +1,9 @@
 package ru.func.snowball.post.parser.web;
 
 import org.jsoup.nodes.Document;
-import ru.func.snowball.post.content.*;
 import ru.func.snowball.post.content.Content;
-import ru.func.snowball.post.content.element.Image;
-import ru.func.snowball.post.content.element.Text;
-import ru.func.snowball.post.content.element.Video;
+import ru.func.snowball.post.content.ContentImpl;
+import ru.func.snowball.post.content.Tag;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -41,12 +39,12 @@ public class RecipientJoyReactor implements Recipient {
 
         for (org.jsoup.nodes.Element element : document.getElementsByClass("image").get(0).parent().children()) {
             if (element.hasText())
-                contents.add(new Text(element.text()));
+                contents.add(new ContentImpl("text", element.text(), ""));
             else if (element.hasClass("image")) {
                 org.jsoup.nodes.Element child = element.getElementsByAttribute("src").get(0);
                 contents.add(child.tagName().equals("img") ?
-                        new Image(child.attr("src")) : child.tagName().equals("iframe") ?
-                        new Video(child.attr("src"), child.className().split("-")[0]) : new Text(""));
+                        new ContentImpl("image", child.attr("src"), "") : child.tagName().equals("iframe") ?
+                        new ContentImpl("video", child.attr("src"), child.className().split("-")[0]) : new ContentImpl("", "", ""));
             }
         }
 

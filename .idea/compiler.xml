@@ -9,5 +9,8 @@
         <module name="Snowball" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Snowball" target="8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

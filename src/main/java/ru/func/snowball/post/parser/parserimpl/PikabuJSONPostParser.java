@@ -10,13 +10,17 @@ public class PikabuJSONPostParser implements JSONPostParser {
     private Recipient pikabu = new RecipientPikabu();
 
     @Override
-    public void getPost(org.jsoup.nodes.Document document, String url, String dir) {
+    public String getPost(org.jsoup.nodes.Document document, String url, String dir) {
 
-        save(GSON.toJson(new Post(url,
+        String post = GSON.toJson(new Post(url,
                 pikabu.getAuthor(document),
                 pikabu.getTimestamp(document),
                 pikabu.getTags(document),
                 pikabu.getContent(document)
-        )), dir);
+        ));
+
+        save(post, dir);
+
+        return post;
     }
 }

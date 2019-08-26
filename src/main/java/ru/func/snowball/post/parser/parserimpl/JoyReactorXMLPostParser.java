@@ -2,6 +2,8 @@ package ru.func.snowball.post.parser.parserimpl;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.ls.DOMImplementationLS;
+import org.w3c.dom.ls.LSSerializer;
 import ru.func.snowball.post.parser.XMLPostParser;
 import ru.func.snowball.post.parser.web.Recipient;
 import ru.func.snowball.post.parser.web.RecipientJoyReactor;
@@ -15,7 +17,7 @@ public class JoyReactorXMLPostParser implements XMLPostParser {
     private Recipient joyReactor = new RecipientJoyReactor();
 
     @Override
-    public void getPost(org.jsoup.nodes.Document document, String url, String dir) {
+    public String getPost(org.jsoup.nodes.Document document, String url, String dir) {
 
         try {
             this.document = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
@@ -63,6 +65,12 @@ public class JoyReactorXMLPostParser implements XMLPostParser {
         post.appendChild(content);
 
         /* Сохранение XML файла */
-        save(this.document, dir);
+        //if (!dir.isEmpty())
+        //save(this.document, dir);
+
+        DOMImplementationLS domImplementation = (DOMImplementationLS) this.document.getImplementation();
+        LSSerializer lsSerializer = domImplementation.createLSSerializer();
+
+        return lsSerializer.writeToString(this.document);
     }
 }

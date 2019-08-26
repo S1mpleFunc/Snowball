@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="ExtraSnowball:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>ExtraSnowball</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="ExtraSnowball-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="ExtraSnowball:war exploded" />
+    </root>
+  </artifact>
+</component>

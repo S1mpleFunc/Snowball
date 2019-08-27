@@ -21,14 +21,12 @@ public class RecipientPikabu implements Recipient {
     public String getTimestamp(Document document) {
 
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
-        long time = 0;
 
         try {
-            time = format.parse(document.getElementsByAttribute("datetime").get(0).attr("datetime")).getTime();
+            return "" + format.parse(document.getElementsByAttribute("datetime").get(0).attr("datetime")).getTime();
         } catch (ParseException ignored) {
+            return "Date unsupported.";
         }
-
-        return time + "";
     }
 
     @Override

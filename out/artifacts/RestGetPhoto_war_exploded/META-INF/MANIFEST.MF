@@ -2,5 +2,4 @@ Manifest-Version: 1.0
 Created-By: IntelliJ IDEA
 Built-By: 1
 Build-Jdk: 1.8.0_171
-Main-Class: ru.func.snowball.MainServlet
 

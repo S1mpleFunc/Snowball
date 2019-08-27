@@ -1,0 +1,16 @@
+ru\func\snowball\MainServlet.class
+ru\func\snowball\post\parser\JSONPostParser.class
+ru\func\snowball\post\parser\parserimpl\JoyReactorXMLPostParser.class
+ru\func\snowball\post\parser\web\Recipient.class
+ru\func\snowball\post\parser\parserimpl\JoyReactorJSONPostParser.class
+ru\func\snowball\post\parser\XMLPostParser.class
+ru\func\snowball\post\parser\parserimpl\PikabuJSONPostParser.class
+ru\func\snowball\post\content\Tag.class
+ru\func\snowball\post\parser\web\RecipientPikabu.class
+ru\func\snowball\post\content\Content.class
+ru\func\snowball\post\content\ContentImpl.class
+ru\func\snowball\post\PostParser.class
+ru\func\snowball\post\parser\web\RecipientJoyReactor.class
+ru\func\snowball\post\parser\XMLPostParser$1.class
+ru\func\snowball\post\Post.class
+ru\func\snowball\post\parser\parserimpl\PikabuXMLPostParser.class

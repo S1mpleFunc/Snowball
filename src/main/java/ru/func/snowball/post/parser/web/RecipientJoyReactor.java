@@ -8,6 +8,9 @@ import ru.func.snowball.post.content.Tag;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author func 10.12.2019
+ */
 public class RecipientJoyReactor implements Recipient {
 
     @Override

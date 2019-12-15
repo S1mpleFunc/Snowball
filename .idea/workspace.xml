@@ -6,30 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bcc73f55-74e3-4592-a143-c5ba5092a3d7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RestGetPhoto_war.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/RestGetPhoto_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/MainServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/Post.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/Post.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/PostParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/Content.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/Content.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/ContentImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/ContentImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/content/Tag.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/JSONPostParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/XMLPostParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/JoyReactorJSONPostParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/JoyReactorXMLPostParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/PikabuJSONPostParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/parserimpl/PikabuXMLPostParser.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/Recipient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/Recipient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/RecipientJoyReactor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/RecipientJoyReactor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/RecipientPikabu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/func/snowball/post/parser/web/RecipientPikabu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/WEB-INF/web.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/web/index.jsp" beforeDir="false" />
-    </list>
+    <list default="true" id="bcc73f55-74e3-4592-a143-c5ba5092a3d7" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,15 +57,15 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\1\IdeaProjects\RestGetPhoto\EEServer\src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\1\IdeaProjects\Snowball\src\post\parser" />
       <recent name="C:\Users\1\IdeaProjects\Snowball\src" />
       <recent name="C:\Users\1\IdeaProjects\Snowball" />
       <recent name="C:\Users\1\IdeaProjects\Snowball\SnowballServer\src" />
       <recent name="C:\Users\1\IdeaProjects\Snowball\SnowballServer\main\java" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\1\IdeaProjects\RestGetPhoto\EEServer\src" />
     </key>
   </component>
   <component name="RunDashboard">

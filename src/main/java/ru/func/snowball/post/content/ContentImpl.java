@@ -2,6 +2,9 @@ package ru.func.snowball.post.content;
 
 import lombok.AllArgsConstructor;
 
+/**
+ * @author func 10.12.2019
+ */
 @AllArgsConstructor
 public class ContentImpl implements Content {
 

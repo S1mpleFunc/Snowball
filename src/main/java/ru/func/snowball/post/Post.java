@@ -7,6 +7,9 @@ import ru.func.snowball.post.content.Tag;
 
 import java.util.List;
 
+/**
+ * @author func 10.12.2019
+ */
 @AllArgsConstructor
 @Data
 public class Post {

@@ -7,6 +7,9 @@ import ru.func.snowball.post.serialize.PostSerializer;
 
 import java.lang.reflect.Type;
 
+/**
+ * @author func 10.12.2019
+ */
 public class JsonSerializer implements PostSerializer {
 
     private Gson gson = new GsonBuilder()
@@ -16,7 +19,10 @@ public class JsonSerializer implements PostSerializer {
 
     @Override
     public String serialize(Post post) {
-        return gson.toJson(post);
+        return "Этот сайт преобразует ссылку с постом к определенной форме.<br>" +
+                "<a href=\"http://funcid.ru\">Сайт администратора.</a><br>" +
+                "Параметры: post - ссылка на пост с Pikabu или JoyReactor, type - тип парсера (xml/json).<br>" +
+                "<a href=\"https://github.com/S1mpleFunc/Snowball\">Исходник проекта</a><br><br>" + gson.toJson(post);
     }
 
     // это, на самом деле, плохо, что эти сериализаторы объявлены внутри класса

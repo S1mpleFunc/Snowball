@@ -10,6 +10,9 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author func 10.12.2019
+ */
 public class RecipientPikabu implements Recipient {
 
     @Override

@@ -6,6 +6,9 @@ import ru.func.snowball.post.content.Tag;
 
 import java.util.List;
 
+/**
+ * @author func 10.12.2019
+ */
 public interface Recipient {
 
     String getAuthor(Document document);

@@ -5,6 +5,9 @@ import com.sun.net.httpserver.HttpServer;
 import java.io.IOException;
 import java.net.InetSocketAddress;
 
+/**
+ * @author func 10.12.2019
+ */
 public class Server {
 
     private static final int BACKLOG = 0;
@@ -17,6 +20,6 @@ public class Server {
     }
 
     public static void main(String[] args) throws IOException {
-        new Server().start("127.0.0.1", 8080);
+        new Server().start("0.0.0.0", Integer.parseInt(System.getenv("PORT")));
     }
 }

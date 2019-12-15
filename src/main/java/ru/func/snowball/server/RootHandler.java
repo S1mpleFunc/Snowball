@@ -17,6 +17,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
 
+/**
+ * @author func 10.12.2019
+ */
 public class RootHandler implements HttpHandler {
 
     @Override
@@ -24,10 +27,9 @@ public class RootHandler implements HttpHandler {
         Map<String, String> query = queryToMap(exchange.getRequestURI().getQuery());
 
         final String postUrl = query.get("post");
-        if (postUrl == null || postUrl.trim().isEmpty()) {
-            exchange.sendResponseHeaders(400, 0);
+        if (postUrl == null || postUrl.trim().isEmpty())
             return;
-        }
+
 
         final String type = query.getOrDefault("type", "xml");
 
@@ -39,7 +41,6 @@ public class RootHandler implements HttpHandler {
         String outputData = serializer.serialize(post);
 
         setContentType(type, exchange);
-
         byte[] dataBytes = outputData.getBytes(StandardCharsets.UTF_8);
         exchange.sendResponseHeaders(200, dataBytes.length);
         exchange.getResponseBody().write(dataBytes);
@@ -82,7 +83,7 @@ public class RootHandler implements HttpHandler {
     private void setContentType(String type, HttpExchange exchange) {
         exchange.getResponseHeaders().add("Content-Type", type.equalsIgnoreCase("xml") ?
                 "application/xml;charset=utf-8" :
-                "application/json;charset=utf-8"
+                "text/html;charset=utf-8"
         );
     }
 }

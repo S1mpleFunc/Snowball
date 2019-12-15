@@ -8,6 +8,9 @@ import ru.func.snowball.post.parser.web.Recipient;
 
 import java.io.IOException;
 
+/**
+ * @author func 10.12.2019
+ */
 @AllArgsConstructor
 public class PostParser {
 

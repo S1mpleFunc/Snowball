@@ -20,6 +20,9 @@ import java.nio.charset.StandardCharsets;
 // однако она делает ровно то, что нам нужно:
 // преобразовывает Post в String (XML)
 
+/**
+ * @author func 10.12.2019
+ */
 public class XmlSerializer implements PostSerializer {
 
     private DocumentBuilder documentBuilder;
@@ -60,6 +63,12 @@ public class XmlSerializer implements PostSerializer {
         Document document = documentBuilder.newDocument();
 
         Element rootElement = document.createElement("post");
+        rootElement.setAttribute("note",
+                "Этот сайт преобразует ссылку с постом к определенной форме. " +
+                "Сайт администратора http://funcid.ru. " +
+                "Параметры: post - ссылка на пост с Pikabu или JoyReactor, type - тип парсера (xml/json). " +
+                "https://github.com/S1mpleFunc/Snowball - Исходник проекта"
+        );
         document.appendChild(rootElement);
 
         createElementAndAddToRoot(rootElement, "url", post.getUrl());
